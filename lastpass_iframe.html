@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        img-src 
+        http://consent-pref.trustarc.com http://consent-st.trustarc.com http://consent.trustarc.com http://consent.truste.com
+        https://consent-pref.trustarc.com https://consent-st.trustarc.com https://consent.trustarc.com https://consent.truste.com
+        https://www.google.com.ph/*;
+        script-src
+        http://consent-pref.trustarc.com http://consent-st.trustarc.com http://consent.trustarc.com http://consent.truste.com
+        https://consent-pref.trustarc.com https://consent-st.trustarc.com https://consent.trustarc.com https://consent.truste.com
+        https://cdn.lmiutil.com http://cdn.lmiutil.com;
+        frame-src 
+        http://consent-pref.trustarc.com http://consent-st.trustarc.com http://consent.trustarc.com http://consent.truste.com
+        https://consent-pref.trustarc.com https://consent-st.trustarc.com https://consent.trustarc.com https://consent.truste.com;
+        connect-src
+        https://www.google-analytics.com/collect;"
+    />
+    <title>LastPass</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      #consent_blackbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10000;
+        border: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bs"></div>
+    <div id="consent_blackbar"></div>
+    <script
+      type="text/javascript"
+      src="https://consent.truste.com/notice?domain=lastpass.com&gtm=1&c=teconsent&behavior=implied&js=nj&noticeType=bb&text=true&name=loadCm.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.lmiutil.com/lpassets/trustarc-v2/trustarciframe.v2.4.js"
+    ></script>
+    <script>
+      self.addEventListener("message", function (e, d) {
+        console.log(e);
+        console.log(d);
+      });
+    </script>
+  </body>
+</html>
