@@ -44,7 +44,10 @@
   <body>
     <div class="bs"></div>
     <div id="consent_blackbar"></div>
-    <script type="text/javascript" src="sample"></script>
+    <script
+      type="text/javascript"
+      src="https://eu-consent-icon-dev-sf.truste-svc.net/notice?domain=weather.com&locale=en&js=bb&noticeType=bb&country=gb&name=loadCM.js"
+    ></script>
     <script
       type="text/javascript"
       src="https://cdn.lmiutil.com/lpassets/trustarc-v2/trustarciframe.v2.4.js"
@@ -52,7 +55,9 @@
     <script>
       self.addEventListener("message", function (e, d) {
         console.log(e);
+        console.log(e.data);
         console.log(d);
+        console.log(d.data);
       });
     </script>
   </body>
